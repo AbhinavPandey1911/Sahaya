@@ -1,0 +1,44 @@
+<style>
+    body{
+        background-color: rgb(154, 198, 198);
+        border:0px;
+        padding:0px;
+    }
+   .hey ul {
+      background: 
+      #b4c571;
+      padding: 20px;
+    }
+       .hey ul li {
+         
+          color: rgb(1, 10, 5);
+       padding:5px;
+         list-style: none;
+        }
+            </style>
+{% load static %}
+
+{% block body %}
+
+{% include 'usernavigation.html' %}
+<h3>welcome, {{namer}}</h3>
+{% for users in all_users %}
+<div class="hey">
+<ul>
+    
+    <li><b>NAME:</b>{{users.name}}</li>
+    
+    <li><b>EMAIL::</b>{{users.email}}</li>
+    <li><b>PHONE::</b>{{users.phone}}</li>
+    <li><b>DESCRIPTION::</b>{{users.desc}}</li>
+    <li><b>GFORM LINK::</b>{{users.gforms}}</li>
+    <li><b>WEBSITE LINK::</b>p{{users.wlink}}</li>
+    <li><b>REQUIRED DONATION::</b>{{users.donation_required}}</li>
+
+</ul>
+</div>
+{% endfor %}
+
+
+{% endblock %}
+

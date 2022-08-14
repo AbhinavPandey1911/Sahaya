@@ -1,0 +1,24 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+<p>
+    Users Login
+</p>
+<form class="container mt-5" method="post">{% csrf_token %}
+<label for="Username"><b>Username</b></label>
+<input type="text" class="form-control" name="username" placeholder="Enter Username">
+
+<label ><b>Password</b></label>
+<input type="text" class="form-control" name="password" placeholder="Enter Password">
+
+
+ <input type="submit" value="Login" class="btn btn-primary">
+ <a href="/usersignup" class="btn btn-primary">CREATE AN ACCOUNT</a>
+</form>
+<hr>
+
+
+ss
+{%  endblock %}

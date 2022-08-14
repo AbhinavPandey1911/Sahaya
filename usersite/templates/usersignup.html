@@ -1,0 +1,50 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+<p>
+    Users Signup
+</p>
+<form class="container mt-5" method="post">{% csrf_token %}
+
+<label for="Name"><b>Name</b></label>
+<input type="text" class="form-control" name="name" placeholder="Name">
+
+<label for="email"><b>Email</b></label>
+<input type="text" class="form-control" name="email" placeholder="Email">
+
+<label for="phone"><b>Phone</b></label>
+<input type="text" class="form-control" name="phone" placeholder="Phone">
+
+<label for="Username"><b>Google Forms Link</b></label>
+<input type="text" class="form-control" name="gforms" placeholder="Google Forms Link">
+
+<label ><b>Password</b></label>
+<input type="text" class="form-control" name="pwd" placeholder="Enter Password">
+
+
+
+<label for="Website Link"><b>Website Link</b></label>
+<input type="text" class="form-control" name="wlink" placeholder="Website Link">
+
+<label for="donation_required"><b>Donation Required</b></label>
+<input type="text" class="form-control" name="donation_required" placeholder="donation_required">
+
+<label for="description"><b>Description Required</b></label>
+<input type="text" class="form-control" name="desc" placeholder="desc">
+
+<label for="donation done"><b>Donation_Done</b></label>
+<input type="text" class="form-control" name="donation_done" placeholder="donation done">
+
+
+
+
+
+<input type="submit" value="SignUp" class="btn btn-primart">
+</form>
+<hr>
+
+
+
+{%  endblock %}

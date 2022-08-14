@@ -1,0 +1,29 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+<p>
+    Supporters Signup
+</p>
+<form class="container mt-5" method="post">{% csrf_token %}
+<label for="firstname"><b>FirstName</b></label>
+<input type="text" class="form-control" name="name" placeholder="Name">
+
+<label for="lastname"><b>Phone Number</b></label>
+<input type="text" class="form-control" name="phone" placeholder="Phone Number">
+
+<label for="Username"><b>UserName</b></label>
+<input type="text" class="form-control" name="email" placeholder="EmailId">
+
+<label ><b>Password</b></label>
+<input type="text" class="form-control" name="pwd" placeholder="Enter Password">
+
+ <input type="submit" value="SignUp" class="btn btn-primart">
+ 
+</form>
+<hr>
+
+
+
+{%  endblock %}

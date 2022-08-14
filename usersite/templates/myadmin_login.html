@@ -1,0 +1,23 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+<p>
+    Admin Login
+</p>
+<form class="container mt-5" method="post">{% csrf_token %}
+<label for="Username"><b>Username</b></label>
+<input type="text" class="form-control" name="uname" placeholder="Enter Username">
+
+<label ><b>Password</b></label>
+<input type="text" class="form-control" name="pwd" placeholder="Enter Password">
+
+
+ <input type="submit" class="btn btn-primary">
+</form>
+<hr>
+
+
+
+{%  endblock %}
